@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All accounts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" />
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js" />-->
+</head>
+<body>
+<h2> List users {{2+2}}</h2>
+  <!--  Start all accounts Another aaaaaaaaaa
+    <div ng-app="mainApp">
+        <script type="text/ng-template" id="acc.htm">
+
+            Search : <input type="text" ng-model="accounts"><br/><br/>
+            <table border="0">
+                <tr ng-repeat="user in users | filter : search">
+                    <td>{{ accounts.name }}</td>
+                </tr>
+            </table>
+        </script>
+        <script>
+            var mainApp = angular.module("mainApp", ['ngRoute']);
+            mainApp.service('UserService',
+                    function()  {
+                        var savedData = {}
+                        function set(data) {
+                            savedData = data;
+                        }
+                        function get() {
+                            return savedData;
+                        }
+                        return {
+                            set: set,
+                            get: get
+                        }
+                    }
+            );
+            mainApp.config(['$routeProvider',
+                function($routeProvider) {
+                    $routeProvider.
+                    when('/index', {
+                        templateUrl: 'index.htm',
+                        controller: 'UsersController'
+                    }).
+                    otherwise({
+                        redirectTo: '/index1'
+                    });
+                }]);
+
+            mainApp.controller('UsersController', function($scope, $http, $location, UserService) {
+                $http.get("/index").success(function (response) {
+                    $scope.accounts = response;
+                });
+            });
+        </script>
+    </div>-->
+</body>
+</html>
