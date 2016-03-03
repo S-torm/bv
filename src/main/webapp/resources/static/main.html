@@ -1,19 +1,25 @@
+<!doctype html>
 <html ng-app="bvApp">
 <head>
     <title>Hello World</title>
+
+    <script src="/resources/js/angularjs/angular.js"></script>
+    <script src="/resources/js/angularjs/angular-route.js"></script>
+    <script src="/resources/static/app.js"></script>
+    <script src="/resources/static/controller/accountController.js"></script>
 </head>
 
 <body>
-<div ng-view>
-<label>Name :</label><input type="text" ng-model="name" placeholder="Enter your name"/>
+Should go the tamplate here
+<a id="link-1" ng-href="/bv/newAccount.html">New account</a>
+<a id="link-2" ng-href="/bv/allAccounts.html">All accounts</a>
+
+<div ng-view></div>
+
+<!--<label>Name :</label><input type="text" ng-model="name" placeholder="Enter your name"/>
 <h1>Hello <span ng-bind="name"></span></h1>
 
-<h1>Hey {{name}}</h1>
-<a id="link-1" ng-href="/bv/account.html">link 1</a> (link, reload!)<br />
+<h1>Hey {{name}}</h1>-->
 
-    <script src="/resources/js/angularjs/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
-    <script src="/resources/static/app.js"></script>
-</div>
 </body>
 </html>
