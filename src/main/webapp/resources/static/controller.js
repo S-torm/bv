@@ -79,13 +79,14 @@ mainApp.controller('UsersController', function($scope, $http, $location, UserSer
         $scope.users = response;
     });
 
-    $scope.editUser = function(user) {
+    $scope.editUser = function (user) {
         UserService.set(user);
         $location.path("/editUser");
     }
 
-    $scope.deleteUser = function(user) {
+    $scope.deleteUser = function (user) {
         $http.delete("api/user/", user).success(function (response) {
             $location.path("/viewUsers");
         });
     }
+})

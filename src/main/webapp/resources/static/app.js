@@ -5,6 +5,9 @@ bvModule.config(['$routeProvider', '$locationProvider',
         $routeProvider.when('/bv/allAccounts', {
             templateUrl: '/resources/static/view/allAccounts',
             controller: 'controller'
+        }).when('/bv/newAccount', {
+            templateUrl: '/resources/static/view/newAccount',
+            controller: 'controller'
         }).otherwise({
             redirectTo: '/'
         });
