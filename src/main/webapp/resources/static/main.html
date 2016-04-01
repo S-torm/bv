@@ -1,6 +1,12 @@
 <!doctype html>
 <html ng-app="bvApp">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
     <title>Hello World</title>
 
     <script src="/resources/js/angularjs/angular.js"></script>
@@ -9,17 +15,39 @@
     <script src="/resources/static/controller.js"></script>
 </head>
 
-<body>
-Should go the tamplate here
-<a id="link-1" ng-href="/bv/newAccount">New account</a>
-<a id="link-2" ng-href="/bv/allAccounts">All accounts</a>
+<body ng-controller="mainController">
 
-<div ng-view></div>
+    Should go the tamplate here
+    <a id="link-1" ng-href="/bv/newAccount">New account</a>
+    <a id="link-2" ng-href="/bv/allAccounts">All accounts</a>
 
-<!--<label>Name :</label><input type="text" ng-model="name" placeholder="Enter your name"/>
-<h1>Hello <span ng-bind="name"></span></h1>
 
-<h1>Hey {{name}}</h1>-->
+    <!-- Standard button -->
+    <button type="button" class="btn btn-default">Default</button>
+
+    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+    <button type="button" class="btn btn-primary">Primary</button>
+
+    <!-- Indicates a successful or positive action -->
+    <button type="button" class="btn btn-success">Success</button>
+
+    <!-- Contextual button for informational alert messages -->
+    <button type="button" class="btn btn-info">Info</button>
+
+    <!-- Indicates caution should be taken with this action -->
+    <button type="button" class="btn btn-warning">Warning</button>
+
+    <!-- Indicates a dangerous or potentially negative action -->
+    <button type="button" class="btn btn-danger">Danger</button>
+
+    <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+    <button type="button" class="btn btn-link">Link</button>
+
+
+    <div ng-view></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/resources/js/bootstrap.min.js"></script>
 
 </body>
 </html>
