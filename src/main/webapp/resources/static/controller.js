@@ -7,3 +7,11 @@ mainController.controller('mainController', ['$scope', '$http',
         });
 
     }]);
+
+mainController.controller('newAccountController', ['$scope', '$http',
+    function ($scope, $http) {
+        $http.get('/bv/newAccount').success(function (data) {
+            $scope.accounts = data;
+        });
+
+    }]);
