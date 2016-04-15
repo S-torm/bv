@@ -1,17 +1,22 @@
-var mainController = angular.module('mainController', []);
+'use strict';
+var mainC = angular.module('mainController', []);
 
-mainController.controller('mainController', ['$scope', '$http',
-    function ($scope, $http) {
-        $http.get('/accounts/all').success(function (data) {
+/*mainC.controller('allCtrl', ['$scope', '$http', '$log',
+    function ($scope, $http, $log) {
+        $log.log(" allCtrl ");
+       /!* $http.get('/accounts/all').success(function (data) {
             $scope.accounts = data;
-        });
+            $log.log("/accounts/all $scope.all " + data);
+        });*!/
 
     }]);
 
-mainController.controller('newAccountController', ['$scope', '$http',
-    function ($scope, $http) {
-        $http.get('/accounts/new').success(function (data) {
-            $scope.accounts = data;
-        });
+mainC.controller('newCtrl', ['$scope', '$http', '$log',
+    function ($scope, $http, $log) {
+        $log.log(" newCtrl ");
+    }]);*/
 
+mainC.controller('mainController', ['$scope', '$http', '$log',
+    function ($scope, $http, $log) {
+        $log.log("mainController ");
     }]);

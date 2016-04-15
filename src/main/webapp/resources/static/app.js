@@ -2,14 +2,16 @@ var bvModule = angular.module('bvApp', ['ngRoute', 'mainController']);
 
 bvModule.config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider){
-        $routeProvider.when('/bv/allAccounts', {
+        //$log.log("$routeProvider " + $routeProvider);
+        $routeProvider.when('/accounts/all', {
             templateUrl: '/resources/static/views/accounts/all',
-            controller: 'mainController'
-        }).when('/bv/newAccount', {
-            templateUrl: '/resources/static/views/aacounts/new',
-            controller: 'newAccountController'
+            controller: 'allCtrl'
+        }).when('/accounts/new', {
+            templateUrl: '/resources/static/views/accounts/new',
+            controller: 'newCtrl'
         }).otherwise({
-            redirectTo: '/'
+            redirectTo: '/',
+            controller: 'mainController'
         });
     }
 ]);
