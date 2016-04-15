@@ -13,9 +13,9 @@ public class AccountIndex {
     }
 
 
-    @RequestMapping(value = "/accounts/new", method = RequestMethod.GET)
+/*    @RequestMapping(value = "/accounts/new", method = RequestMethod.GET)
     public void createUser() {
         System.out.println(" /accounts/new GET ");
         //return "[]";
-    }
+    }*/
 }
