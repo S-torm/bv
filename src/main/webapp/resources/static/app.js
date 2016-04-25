@@ -1,4 +1,4 @@
-var bvModule = angular.module('bvApp', ['ngRoute', 'mainController']);
+var bvModule = angular.module('bvApp', ['ngMaterial', 'ngRoute', 'mainController']);
 
 bvModule.config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider){
