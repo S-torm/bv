@@ -20,7 +20,7 @@ mainController.controller('mainController', ['$scope', '$http', '$log',
         $log.log("mainController ");
     }]);
 
-mainController.controller('MenuController', function DemoCtrl($mdDialog) {
+mainController.controller('MenuController', function DemoCtrl($scope, $location, $log) {
     this.settings = {
         printLayout: true,
         showRuler: true,
@@ -28,10 +28,5 @@ mainController.controller('MenuController', function DemoCtrl($mdDialog) {
         presentationMode: 'edit'
     };
     this.sampleAction = function(name, ev) {
-        $mdDialog.show($mdDialog.alert()
-            .title(name)
-            .textContent('You triggered the "' + name + '" action')
-            .ok('Great')
-            .targetEvent(ev)
-        );
+        $location.url('#/accounts/new');
     }});
