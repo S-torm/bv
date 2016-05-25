@@ -1,19 +1,29 @@
-var bvModule = angular.module('bvApp', ['ngMaterial', 'ngRoute', 'mainController']);
+/*
+ angular.module('bvApp', ['ngNewRouter', 'ngAnimate', 'ngAria', 'ngMaterial'])
+ .controller('MenuController', ['$router', MenuController]);
+ function MenuController($router) {
+ $router.config([
+ { path: '/accounts', component: 'accounts' }
+ ]);
+ }
+ */
 
-bvModule.config(['$routeProvider', '$locationProvider',
-    function($routeProvider, $locationProvider){
-        //$log.log("$routeProvider " + $routeProvider);
-        $routeProvider.when('/accounts/all', {
-            templateUrl: '/resources/static/views/accounts/all.html',
-            controller: 'allCtrl'
-        }).when('/accounts/new', {
-            templateUrl: '/resources/static/views/accounts/new.html',
-            controller: 'newCtrl'
-        }).otherwise({
-            redirectTo: '/',
-            controller: 'mainController'
-        });
-    }
-]);
+(function() {
+    'use strict';
+angular
+    .module('bvApp')
+    .controller('MenuController', Controller);
 
+Controller.$inject = [
+    '$router'
+];
 
+function Controller($router) {
+    $router.config([
+        { path: '/', redirectTo: '/accounts' },
+        { path: '/accounts', component: 'accounts' },
+        { path: '/accounts', component: 'accounts' }
+    ]);
+}
+
+})();

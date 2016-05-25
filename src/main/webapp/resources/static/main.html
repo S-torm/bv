@@ -12,11 +12,9 @@
     <link href="/resources/css/bootstrap.min.css" rel="stylesheet">-->
     <title>БВ Патент</title>
 
-    <script src="/resources/js/angularjs/angular.js"></script>
+   <!-- <script src="/resources/js/angularjs/angular.js"></script>
     <script src="/resources/js/angularjs/angular-route.js"></script>
-
-    <script src="/resources/static/app.js"></script>
-    <script src="/resources/static/controller.js"></script>
+-->
 </head>
 
 <body>
@@ -29,7 +27,7 @@
                 <md-menu-bar>
                     <md-menu>
                         <button ng-click="$mdOpenMenu()">
-                            Бугалтерия
+                            Бухгалтерия
                         </button>
                         <md-menu-content>
                             <md-menu-item>
@@ -39,23 +37,11 @@
                             </md-menu-item>
                             <md-menu-divider></md-menu-divider>
                             <md-menu-item>
-                                <md-button ng-click="ctrl.sampleAction('share', $event)">
+                                <md-button ng-link="ctrl.sampleAction('share', $event)">
                                     Новый счет
                                 </md-button>
                             </md-menu-item>
                             <md-menu-divider></md-menu-divider>
-                            <md-menu-item>
-                                <md-menu>
-                                    <md-button ng-click="$mdOpenMenu()">New</md-button>
-                                    <md-menu-content>
-                                        <md-menu-item><md-button ng-click="ctrl.sampleAction('New Document', $event)">Document</md-button></md-menu-item>
-                                        <md-menu-item><md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Spreadsheet</md-button></md-menu-item>
-                                        <md-menu-item><md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Presentation</md-button></md-menu-item>
-                                        <md-menu-item><md-button ng-click="ctrl.sampleAction('New Form', $event)">Form</md-button></md-menu-item>
-                                        <md-menu-item><md-button ng-click="ctrl.sampleAction('New Drawing', $event)">Drawing</md-button></md-menu-item>
-                                    </md-menu-content>
-                                </md-menu>
-                            </md-menu-item>
 
                         </md-menu-content>
                     </md-menu>
@@ -70,20 +56,6 @@
     </md-content>
 </div>
 
- <!--   Should go the tamplate here
-    <a id="link-1" ng-href="#/accounts/new">New account</a>
-    <a id="link-2" ng-href="#/accounts/all">All accounts</a>
-</br>
-    <a id="link-3" ng-href="{{/accounts/new}}">New </a> (link, don't reload)<br />
-    <a id="link-4" ng-href="{{/accounts/all}}">All </a> (link, don't reload)<br />
-    &lt;!&ndash; Standard button &ndash;&gt;
-    <button type="button" class="btn btn-default">Default</button>-->
-
-
-    <!--<div ng-view> view goes here </div>-->
-
-   <!-- <script src="/resources/js/bootstrap.min.js"></script>-->
-
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
@@ -93,5 +65,7 @@
     <!-- Angular Material Library -->
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
 
+    <script src="/resources/static/app.js"></script>
+    <script src="/resources/static/controller.js"></script>
 </body>
 </html>
